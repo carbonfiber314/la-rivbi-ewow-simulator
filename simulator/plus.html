@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>la rivbi's EWOW Simulator · LD2 </title>
+	<link href="plus.css" rel="stylesheet" />
+	<script src="../declarations.js"></script>
+</head>
+
+<!--We're putting gambling back on the menu baby!!!-->
+
+<body>
+
+
+<h1>la rivbi's EWOW Simulator<sub>LD2</sub></h1>
+
+
+<h2 id="counter">Loading...</h2>
+<div class="text_center">
+    <button id="next_round" type="button" class="center">Next Round</button>
+    <button id="reset_sim" type="button" class="center">Reset Simulator</button>
+</div>
+
+<details open>
+	<summary><b>Simulator Settings</b></summary>
+
+
+		<fieldset>
+			<legend>Simulation Basis</legend>
+
+			<select id="distribution_select">
+				<option selected value="gauss">Gaussian</option>
+				<option value="beta">Beta</option>
+			</select>
+			on 
+			<select id="basis_select">
+				<option selected value="z-score">Z-score</option>
+				<option value="average">average percentile</option>
+				<option value="rr">relative rank</option>
+				<option value="sr">standardized rank</option>
+			</select>
+
+		</fieldset>
+	
+
+		<fieldset class="ld2_options">
+			<legend>Life Decay 2 Settings</legend>
+
+			<input type="checkbox" id="ld2_toggle" checked>
+			<label for="ld2_toggle">Enabled</label>
+			<input type="number" id="ld2_start" min="17" value="17">
+			<label for="ld2_start">Starting Round</label>
+            <input type="number" id="ld2_prize" min="0" max="100" value="10">
+			<label for="ld2_prize">% Prize</label>
+			<input type="number" id="ld2_safe" min="0" max="100" value="66">
+			<label for="ld2_safe">% Safe</label>
+
+		</fieldset>
+
+		<input type="checkbox" id="dnp_toggle">
+		<label for="dnp_toggle">Disable DNPs</label>
+		
+
+</details>
+
+<table class="center" hidden>
+	<thead>
+		<tr>
+			<th scope="col">Rank</th>
+			<th scope="col">Name</th>
+			<th scope="col">Lives</th>
+			<th scope="col" id="performance">Z-Score</th>
+		</tr>
+	</thead>
+	<tbody id="leaderboard">
+	</tbody>
+</table>
+
+<noscript>
+    No More JavaScript: Now How Are We Making Simulations Now Dagnabbit.
+</noscript>
+
+<footer>
+	The parameters of the beta distribution for a contestant's performances are derived with <a href="https://stats.stackexchange.com/questions/12232/calculating-the-parameters-of-a-beta-distribution-using-the-mean-and-variance">this method</a>.<br>
+	<a href="https://la-rivbi.github.io/simulator/test.html">Original simulator</a> by la rivbi, updated for EWOW 15B with minor feature additions by CarbonFiber.<br>
+	<a href="../index.html">Home</a> · <a href="https://github.com/carbonfiber314/la-rivbi-ewow-simulator/tree/extra-features">GitHub</a> :3
+</footer>
+
+<script src="../load-master.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+<script src="plus.js"></script>
+
+</body>
+</html>
