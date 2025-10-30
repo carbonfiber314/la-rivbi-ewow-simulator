@@ -300,7 +300,7 @@ function simulate_round () {
 	}
 	contestants.sort((a, b) => b.current_score - a.current_score);
 	let prize_spots = Math.round(response_count * (current_episode >= ld2_start && ld2_enabled ? ld2_prize : 0.05));
-	let safe_spots = Math.max(Math.round(response_count * (current_episode >= ld2_start && ld2_enabled ? ld2_safe : 0.51)), 1); // ensure one safe spot.
+	let safe_spots = ld2_safe == 0 ? 0 : Math.max(Math.round(response_count * (current_episode >= ld2_start && ld2_enabled ? ld2_safe : 0.51)), 1); // ensure one safe spot. // except when safe % = 0.
     let round_title = document.getElementById("counter");
     round_title.textContent = "Round " + current_episode + ": " + response_count + "/" + alive_count + " responded";
     let table_body = document.getElementById("leaderboard");
