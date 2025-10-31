@@ -3,6 +3,7 @@
 let contestants = contestants_master.filter(a => a);
 
 let predictions = [];
+
 function add_prediction(author, as_of, prediction){
 	result = [];
 	for (let i = 0; i < prediction.length; i++){
@@ -28,17 +29,17 @@ function add_prediction(author, as_of, prediction){
 }
 
 
-add_prediction("losered", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","Alternav","BubbleTii","Catw","Charito","Heronix","Ironn","italic","iTeo","Izzeee","J_d","956761d0-e8d6-4f5b-b0d3-72fb222c05bb","John D","JujuM","losered","milst","Onch","Owner of","PizzaS","RAMT","Raptarr","Ryan ST","ShadowF","Sparrowcat","StealthyS","tekh","whitecy","xXB","YoshiAw","~~~good","$Eev","ALITL","Amelia, A","ArnoobE","Azurite","cerese","cloverp","Cohaki","CringeCat","570f2536-86e6-4453-8280-c7d8e5f956e5","Daylune","Flare Dare","garf","Gman","goobrey","IMC","Juhm","leftl","MetaC","MineF","MoltenA","Moralit","namd","Nick Wh","notexi","oxii","PengiQ","PG2K","Rora_B","s83757","Shorky","Snoozingn","Tak A","taopy","tauttie","thanos","The Ilu","TieTie","TTGuy","X_Ry","<Px>","2 Laws","Adamanti","Alley%","chichi","Cosmeti","CrowB#","DogeB","363f7b55-13a6-4aa6-93fe-fb187ea835ff","Gizmote","Hazel C","Ixc","Julians","kitkaty","Koopa472","la r","LemonV","Maples","Meowi","Meptune","5696ca02-91dd-42ff-a8c2-bb5380e2b224","mrjellyf","Nerdy G","NorthEastB","Paintsp","Phant0","recc","Skippery45","Snowbled","Swims","Syro33","Thane","ThePinkB","Valeburge","Yonel","yoshik","aaronvx","avocadoe","cat cop","Darrest","Davoid","figgyc","LegendF","ShadowK","spooky.","thenamesh","Zettex","FishOnT","iRDM","Leopards","PlasmicT"]);
+add_prediction("losered", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","Alternav","BubbleTii","Catw","Charito","Heronix","Ironn","italic","iTeo","Izzeee","J_d","956761d0-e8d6-4f5b-b0d3-72fb222c05bb","John D","JujuM","losered","milst","Onch","Owner of","PizzaS","RAMT","Raptarr","Ryan ST","ShadowF","Sparrowcat","StealthyS","tekh","whitecy","xXB","YoshiAw","~~~good","$Eev","ALITL","Amelia, A","ArnoobE","Azurite","cerese","cloverp","Cohaki","CringeCat","570f2536-86e6-4453-8280-c7d8e5f956e5","Daylune","Flare Dare","garf","Gman","goobrey","IMC","Juhm","leftl","MetaC","MineF","MoltenA","Moralit","namd","Nick Wh","notexi","oxii","PengiQ","PG2K","Rora_B","s83757","reremiau","Snoozingn","Tak A","taopy","tauttie","twpaz.","The Ilu","TieTie","TTGuy","X_Ry","<Px>","2 Laws","Adamanti","Alley%","chichi","Cosmeti","CrowB#","DogeB","363f7b55-13a6-4aa6-93fe-fb187ea835ff","Gizmote","Hazel C","Ixc","Julians","kitkaty","Koopa472","la r","LemonV","Maples","Meowi","Meptune","5696ca02-91dd-42ff-a8c2-bb5380e2b224","mrjellyf","Nerdy G","NorthEastB","Paintsp","Phant0","recc","Skippery45","Snowbled","Swims","Syro33","Thane","ThePinkB","Valeburge","Yonel","yoshik","aaronvx","avocadoe","cat cop","Darrest","Davoid","figgyc","LegendF","ShadowK","spooky.","thenamesh","Zettex","FishOnT","iRDM","Leopards","PlasmicT"]);
 
-add_prediction("LemonVenom", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","Alternav","Catw","Ironn","italic","iTeo","J_d","John D","JujuM","losered","milster","Naslem","Onch","Owner of","RAMT","Stealthy","Twigg","whitec","xXB","Arnoob","Azurite","cerese","cloverp","Cohaki","CringeC","570f2536-86e6-4453-8280-c7d8e5f956e5","Deckardv","Gman","Juhm","Moralit","PaniniP","PengiQ","puzzlypug","Sanjay2","Snoozingn","Tak A","taopy","thanos","The Il","TieTie","Water Ch","Adamanti","Alley%","cashedc","Cosmeti","DatFatC","Jaki","Juliansl","Koopa4","KWX","LemonV","7149d1d9-d34e-4af9-aed5-992f90c4bbd6","Meowi","Mept","5696ca02-91dd-42ff-a8c2-bb5380e2b224","MrDell47","Nerdy G","noef","Paintspot","recc","Skippery45","sodiumhy","Syro33","Thane","tr_","Valeburger","Verigo","Yonel","eyB","figgyc","fryu","Graysand","GreenT","hydrogenc","Lolwut","Magnetty","Marisa L","MeLikeP","normalb","RyM","Sausiiie","spooky.","terminateds","thenamesh","Zettex","FishOnT","InteleonsI","iRDM","Jac4","Leopards","Nonexistential","PlasmicT","Wenyu"]);
+add_prediction("LemonVenom", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","Alternav","Catw","Ironn","italic","iTeo","J_d","John D","JujuM","losered","milster","Naslem","Onch","Owner of","RAMT","Stealthy","Twigg","whitec","xXB","Arnoob","Azurite","cerese","cloverp","Cohaki","CringeC","570f2536-86e6-4453-8280-c7d8e5f956e5","Deckardv","Gman","Juhm","Moralit","PaniniP","PengiQ","puzzlypug","Sanjay2","Snoozingn","Tak A","taopy","twpaz.","The Il","TieTie","Water Ch","Adamanti","Alley%","cashedc","Cosmeti","DatFatC","Jaki","Juliansl","Koopa4","KWX","LemonV","7149d1d9-d34e-4af9-aed5-992f90c4bbd6","Meowi","Mept","5696ca02-91dd-42ff-a8c2-bb5380e2b224","MrDell47","Nerdy G","noef","Paintspot","recc","Skippery45","sodiumhy","Syro33","Thane","tr_","Valeburger","Verigo","Yonel","eyB","figgyc","fryu","Graysand","GreenT","hydrogenc","Lolwut","Magnetty","Marisa L","MeLikeP","normalb","RyM","Sausiiie","spooky.","terminateds","thenamesh","Zettex","FishOnT","InteleonsI","iRDM","Jac4","Leopards","Nonexistential","PlasmicT","Wenyu"]);
 
-add_prediction("aaronvx", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","#zac","Alternav","Blue Gelatin","Catw","Charito","Dawncy","Heronix","IceK","Ironn","italic","iTeo","J_d","956761d0-e8d6-4f5b-b0d3-72fb222c05bb","JujuM","losered","milster","Naslemi","Onch","Owner of","RAMT","Shardr","Sparrowc","StealthyS","Twiggy","whitec","xXB","Yume F","Algo.00","Arnoob","Azurite","cerese","cloverp","CringeC","570f2536-86e6-4453-8280-c7d8e5f956e5","Deckardv","Funo'","garf","Gman","gmo","IMC","Juhm","mazuat","MetaC","MoltenA","Moralit","notexi","PG2K","PsychoticS","Sanjay2","Snoozingn","Tak A","taopy","thanos w","TieTie","TTGuy","X_Ry","<Px>","2 L","60mo","ACN","Adamanti","alexa.f","Algotis","Alley%","AnEp","chichi","ConvexP","CosmetiC","DatF","363f7b55-13a6-4aa6-93fe-fb187ea835ff","Gizmote","hyfin","Ixc","JayTee","Juliansl","kaisle","kitkatyj","Koopa4","Maplesk","Meowi","Mept","5696ca02-91dd-42ff-a8c2-bb5380e2b224","MrDell4","MysteriousGrimR","nlcd","noef","Paintsp","Phant0","recc","SinisterS","Swimsw","Thane","TheMightyMidge","tr_","Valeburger","Xes","Zaff","aaronvx","avocadoe","awepi","bfboh","Darrest","Davoid","elevatorz","figgyc","fryuaj","GreenTree","MedioL","spooky.","thenamesh","Truttle1","Zettex","96 L","BestKP","FishOnT","iRDM","Leopardsun","Nonexistential","PlasmicT","Trenerd"]);
+add_prediction("aaronvx", "5B", ["4DJ","Purplegaze","scorb","sicto","Srim","Xylob","Yua","#1 s","#zac","Alternav","Blue Gelatin","Catw","Charito","Dawncy","Heronix","IceK","Ironn","italic","iTeo","J_d","956761d0-e8d6-4f5b-b0d3-72fb222c05bb","JujuM","losered","milster","Naslemi","Onch","Owner of","RAMT","Shardr","Sparrowc","StealthyS","Twiggy","whitec","xXB","Yume F","Algo.00","Arnoob","Azurite","cerese","cloverp","CringeC","570f2536-86e6-4453-8280-c7d8e5f956e5","Deckardv","Funo'","garf","Gman","gmo","IMC","Juhm","mazuat","MetaC","MoltenA","Moralit","notexi","PG2K","PsychoticS","Sanjay2","Snoozingn","Tak A","taopy","twpaz.","TieTie","TTGuy","X_Ry","<Px>","2 L","60mo","ACN","Adamanti","alexa.f","Algotis","Alley%","AnEp","chichi","ConvexP","CosmetiC","DatF","363f7b55-13a6-4aa6-93fe-fb187ea835ff","Gizmote","hyfin","Ixc","JayTee","Juliansl","kaisle","kitkatyj","Koopa4","Maplesk","Meowi","Mept","5696ca02-91dd-42ff-a8c2-bb5380e2b224","MrDell4","MysteriousGrimR","nlcd","noef","Paintsp","Phant0","recc","SinisterS","Swimsw","Thane","TheMightyMidge","tr_","Valeburger","Xes","Zaff","aaronvx","avocadoe","awepi","bfboh","Darrest","Davoid","elevatorz","figgyc","fryuaj","GreenTree","MedioL","spooky.","thenamesh","Truttle1","Zettex","96 L","BestKP","FishOnT","iRDM","Leopardsun","Nonexistential","PlasmicT","Trenerd"]);
 
 
 add_prediction("Pink man", "6B",
 [
 "4DJ", "Purplegaze", "scorb", "Yuak", "#za", "Charito", "iTeo", "956761d0-e8d6-4f5b-b0d3-72fb222c05bb", "John D", "sicto", "Srim", "Twigg", "whitecyc", "Xylob", "#1 s", /*"#zac", */"$Ee", "BubbleTii", "Catw", "Cohaki",
-"Cpink", "570f2536-86e6-4453-8280-c7d8e5f956e5", "Donut C", "GrayThe", "IceKeyH", "indoorf", "italic1", "J_d", "JujuM", "losered", "milster08", "namdoy", "Owner o", "PaniniP", "pfysche", "Pink m", "Sparrowcat", "the op b", "Water C", "X_R",
+"Cpink", "570f2536-86e6-4453-8280-c7d8e5f956e5", "Donut C", "GrayThe", "IceKeyH", "indoorf", "italic1", "J_d", "JujuM", "losered", "milster08", "namdoy", "Owner o", "PaniniP", "pfysche", "Pink m", "Sparrowcat", "MayUnderFlowers", "Water C", "X_R",
 "xXB", "YoshiA", "cloverp", "Deckardv", "Juhm", "Juliansl", "Lyrical T", "5696ca02-91dd-42ff-a8c2-bb5380e2b224", "MineF", "Naslemi", "nlcd", "One N", "oxii", "Paints", "PengiQ", "PG2K", "recc", "Snoozingn", "stone b", "Talinlol",
 "taopy", "ThatPerson", "TieTie", "TrainGo", "TTGu", "2 L", "aaronvx","Alley%", "Brandy?", "chichi", "DerM", "363f7b55-13a6-4aa6-93fe-fb187ea835ff", "GreenieG", "GreenT", "Kaestra", "Koopa4", "7149d1d9-d34e-4af9-aed5-992f90c4bbd6", "NorthEastB", "RiccoB", "spooky.",
 "Thane", "tr_", "Wilm", "Xes", "\"Dan.", "ACN", "cheezdoo", "Deficie", "FishO", "ilo ", "Meln", "MysteriousG", "ramen powder", "Strawburr", "terminateds", "Wildz", "96 L", "figgyc", "PlasmicT", "alexlion"
@@ -48,7 +49,7 @@ add_prediction("hydrogencitrus", "7B",
 [
 "4DJ", "Purplegaze", "Xyloba", "956761d0-e8d6-4f5b-b0d3-72fb222c05bb", "Yuak", "scorb", "whitecy", "losered", "570f2536-86e6-4453-8280-c7d8e5f956e5", "namdoy",
 "Twigg", "#za", "Srim", /*"Srim",*/ "ShadowF", "sicto", "John D", "X_R", "Snoozingn", "CringeC",
-"ThatPerson", "#1 s", "Sparrowc", "italic177", "Arnoob", "Moralitea", "Yume F", "thanos w", "milster08", "Catw",
+"ThatPerson", "#1 s", "Sparrowc", "italic177", "Arnoob", "Moralitea", "Yume F", "twpaz.", "milster08", "Catw",
 "$Eev", "RAMT", "iTe", "Cohaki", "Heronix", "xXB", "Cube4", "Gman", "YoshiAw", "TieTie",
 "ecf2bba0-4cc1-4efd-9403-a1152050c32f", "aaronv", "5696ca02-91dd-42ff-a8c2-bb5380e2b224", "Juhm", "Juliansl", "Nerdy G", "Gizmote", "PengiQ", "cloverp", "TTGu",
 "puzzlypugzl", "363f7b55-13a6-4aa6-93fe-fb187ea835ff", "Tak A", "Naslemi J", "cerese",  "smoov22", "9facbd1b-7f26-4f96-8076-2a48819627a1", "GreenT", "StealthyS", "IntersectingP", 
@@ -60,7 +61,7 @@ add_prediction("hydrogencitrus", "7B",
 
 add_prediction("iRDM", "7B",
 [
-"Xylob", "Snoozingn", "Purplegaze", "thanos", "TieT", "terminateds", "iRDM", "Owner o", "whitecyc", "losered",
+"Xylob", "Snoozingn", "Purplegaze", "twpaz.", "TieT", "terminateds", "iRDM", "Owner o", "whitecyc", "losered",
 "CringeC", "RAMT", "PlasmicT", "iTeo", "scorb", "John D", "Cohak", "Cpi", "Niho", "Koopa4",
 "MrShr", "ThePinkB", "Unofficial S", "cerese", "sicto", "Catw", "Onch", "570f2536-86e6-4453-8280-c7d8e5f956e5", "#1 s", "Srim",
 "Alley%", "xtr", "Zett", "Fred S", "thenamesh", "4DJ", "AnArt", "Jakiller", "Lyrical T", "PaniniP",
@@ -81,7 +82,7 @@ add_prediction("mazuat", "7B",
 "losered", "Lyrical T", "Maildr", "MarbleM", "mazuat", "Meowi", "Mercuri", "MetaC", "5696ca02-91dd-42ff-a8c2-bb5380e2b224", "MineFlex_B", "Moralitea", "MrDe", "Nerdy G", "Nihon", "Nindr", "nlcd",
 "noef", "notex", "Onch", "One Ni", "OveCZ", "Paints", "PaniniP", "PengiQ", "PlasmicT", "PriceT", "Purplegaze", "Radio_", "RainbowK", "RAMT", "RetroCr", "Ryan ST",
 "s.eptem", "scorb", "sicto", "SinisterS", "Slimb", "smoov2", "Snoozingn", "SooperH", "Sparrowc", "Srim", "StealthyS", "Suit Q", "taopy", "Tardist", "terminateds", "Tetrian22",
-"thanos w", "ThatSh", "The Ilu", "the op ", "thenamesh", "ThePinkB", "TieTie", "tr_", "Twiggy", "whitecyc", "X_Ry", "xXB", "Xylob", "YellowE", "YoshiA", "Yuakim"
+"twpaz.", "ThatSh", "The Ilu", "MayUnderFlowers", "thenamesh", "ThePinkB", "TieTie", "tr_", "Twiggy", "whitecyc", "X_Ry", "xXB", "Xylob", "YellowE", "YoshiA", "Yuakim"
 ]);
 
 add_prediction("Catworld", "7B",
@@ -93,8 +94,8 @@ add_prediction("Catworld", "7B",
 "Juhm", "JujuM", "Kiwiyum", "Koopa4", "la r", "losered", "Lyrical T", "9facbd1b-7f26-4f96-8076-2a48819627a1", "mazuat", "Meowi",
 "Mept", "5696ca02-91dd-42ff-a8c2-bb5380e2b224", "Mikl P", "milster08", "MineFlex_B", "MoonMa", "Moralitea", "namdoy", "Nerdy G", "nlcd",
 "Onch", "Owner of the P", "oxii", "PaniniP", "Parallel Paper", "PengiQ", "pfysche", "Purplegaze", "RainbowK", "RAMT",
-"Ryan ST", "s.ep", "scorb", "ShadowF", "Shorky", "sicto", "SinisterS", "smoov22", "Snoozingn", "Sparrowc",
-"spooky.p", "Srim", "St4rr", "StealthyS", "Tak A", "thanos w", "ThatPerson", "the op b", "ThePinkB", "TieTie", "TrainGoB", "Twiggy", "Twisted T", "Water Ch", "whitecyc", "Wilma", "X_Ry", "xXB", "Xyloba", "Yuakim"
+"Ryan ST", "s.ep", "scorb", "ShadowF", "reremiau", "sicto", "SinisterS", "smoov22", "Snoozingn", "Sparrowc",
+"spooky.p", "Srim", "St4rr", "StealthyS", "Tak A", "twpaz.", "ThatPerson", "MayUnderFlowers", "ThePinkB", "TieTie", "TrainGoB", "Twiggy", "Twisted T", "Water Ch", "whitecyc", "Wilma", "X_Ry", "xXB", "Xyloba", "Yuakim"
 ]);
 
 add_prediction("misch13vous", "8B",
@@ -111,7 +112,7 @@ add_prediction("misch13vous", "8B",
 "Parallel Paper", "PCM", "Phant0", "PlasmicT", "pokeys", "Purplegaze", "RAMT", "random.", "recc", "Reselect",
 "SaddleB", "scorb", "Shardren", "sicto", "SinisterSh",
 "Snoozingn", "somsU", "Sparrowc", "Spicym", "spooky.", "Srim", "Swimswum", "Tak A", "Tantu",
-"tautt", "terminateds", "Thane", "thanos w", "The Great And Mi", "the op", "TheMightyMidge", "TieTie",
+"tautt", "terminateds", "Thane", "twpaz.", "The Great And Mi", "MayUnderFlowers", "TheMightyMidge", "TieTie",
 "Timvideo3", "tr_", "Truttle1", "TTGuy", "Twiggy", "Verigold", "Whiffl", "whitecyc",
 "X_Ry", "xXB", "Xyloba", "Yuakim", "Zaffr", "Zettex", "Zixi"
 ]);
@@ -124,7 +125,7 @@ add_prediction("Pink man", "8B",
 "J_d", "John D", "Owner of the P", "xXB", "X_R", 
 "Catw", "Charito", "CookieCrisp", "Deckardv", "363f7b55-13a6-4aa6-93fe-fb187ea835ff", "Evolt", "Gman", "IceKeyH", "JujuM", "Lyrical Ty",
 "5696ca02-91dd-42ff-a8c2-bb5380e2b224", "milster", "MineF", 
-"Nerdy G", "PaniniP", "PoliteCh", "Shorky", "ThatPerson",
+"Nerdy G", "PaniniP", "PoliteCh", "reremiau", "ThatPerson",
 "TieTie", "$Ee", "aaronv", "AnEp", "cashedcred", "cloverpep",
 "Cpink", "DatH", "Donut Cor", "Fred Som", "garf", "Gizmote", 
 "Gordisch", "ecf2bba0-4cc1-4efd-9403-a1152050c32f", "Juhm", "Julians", "Koopa4", "LemonV",
@@ -320,16 +321,16 @@ add_prediction("MoltenAshes", "9B",[
 "RAMTurtle",
 "recc",
 "scorb",
-"Shorky",
+"reremiau",
 "sictoabu",
 "SinisterShovel",
 "Snoozingnewt",
 "Sparrowcat",
 "Srimochi",
 "terminatedslime",
-"thanos whale.",
+"twpaz.",
 "The Ilucuthen Empire",
-"the op boss",
+"MayUnderFlowers",
 "ThePinkBunnyEmpire",
 "TieTiePerson",
 "tr_",
@@ -373,9 +374,9 @@ add_prediction("RAMTurtle", "9B", [
 "Niho", "Onch", "Owner of the", "Paintsp", "PengiQ",
 "pfysche", "Pink man", "PlasmicT", "PoliteCheese1",
 "Purplegaze", "RainbowK", "RAMTu", "recc", "scorb",
-"Shorky", "sicto", "simp4", "Snoozing", "Sparrowc",
-"spooky.p", "Srim", "Talinl", "terminateds", "thanos",
-"The Ilucu", "the op ", "ThePinkB", "TieTieP", "tr_",
+"reremiau", "sicto", "simp4", "Snoozing", "Sparrowc",
+"spooky.p", "Srim", "Talinl", "terminateds", "twpaz.",
+"The Ilucu", "MayUnderFlowers", "ThePinkB", "TieTieP", "tr_",
 "Twiggy", "Verig", "whitecyc", "X_Ry", "xXB", "Xyloba",
 "Yuak", "Yume F", "Zettex"
 ]);
@@ -450,8 +451,8 @@ add_prediction("aaronvx", "9B", [
 "ShadowFlames",
 "namdoy",
 "WholeNote1",
-"thanos whale.",
-"Shorky",
+"twpaz.",
+"reremiau",
 "9facbd1b-7f26-4f96-8076-2a48819627a1",
 "Ixcors",
 "GreenTree",
@@ -479,7 +480,7 @@ add_prediction("aaronvx", "9B", [
 "IntersectingPlanes",
 "FishOnTheInternet",
 "SuomiNamco",
-"the op boss",
+"MayUnderFlowers",
 "Poop book",
 ]);
 
@@ -494,7 +495,7 @@ add_prediction("LemonVenom", "10B", [
 "5696ca02-91dd-42ff-a8c2-bb5380e2b224",
 "Deckardv", "Nerdy G", "cloverpep", "ArnoobE", "Snooz",
 "italic177", "PaniniP", "Owner of", "Koopa4", "CloudySkyes",
-"pfysche", "ThePinkB", "Catw", "MoltenA", "Cohak", "thanos w",
+"pfysche", "ThePinkB", "Catw", "MoltenA", "Cohak", "twpaz.",
 "LemonVen", "goobr", "Pink man", "RAMT", "The Ilu", "Heronix",
 "YoshiAwe", "Azurite", "ConvexP", "Juhm", "la r", "aaronv",
 "Grammar ", "terminatedsl", "mazuat", "PengiQ", "Juliansl",
@@ -517,12 +518,12 @@ add_prediction("ThatShowGuy", "10B", [
 "570f2536-86e6-4453-8280-c7d8e5f956e5",
 "iTeo", "sicto", "TieTie", "RainbowK", "xXB", "X_R", "Yuak",
 "956761d0-e8d6-4f5b-b0d3-72fb222c05bb",
-"Twiggy", "#za", "the op b",
+"Twiggy", "#za", "MayUnderFlowers",
 "Catw", "cloverp", "Cohaki", "ConvexP", 
 "363f7b55-13a6-4aa6-93fe-fb187ea835ff",
 "GreenieG",
 "5696ca02-91dd-42ff-a8c2-bb5380e2b224",
-"Owner of", "PaniniP", "Pink man", "Shorky", "thanos w", "Laurc",
+"Owner of", "PaniniP", "Pink man", "reremiau", "twpaz.", "Laurc",
 "aaronv", "CringeCat", "Grammar L", "Ixc",  "John Du", "Juhm",
 "la ", "mazuat", "Meowi", "Moralitea", 
 "e5e585d0-b084-4826-88c9-1c7392e0a337",
@@ -616,7 +617,7 @@ add_prediction("MoltenAshes", "10B", [
 "RAMTurtle",
 "recc",
 "scorb",
-"Shorky",
+"reremiau",
 "sictoabu",
 "SinisterShovel",
 "Snoozingnewt",
@@ -625,9 +626,9 @@ add_prediction("MoltenAshes", "10B", [
 "Srimochi",
 "terminatedslime",
 "Thane",
-"thanos whale.",
+"twpaz.",
 "The Ilucuthen Empire",
-"the op boss",
+"MayUnderFlowers",
 "ThePinkBunnyEmpire",
 "TieTiePerson",
 "tr_",
@@ -651,14 +652,14 @@ add_prediction("Pink man", "11B", [
 "570f2536-86e6-4453-8280-c7d8e5f956e5",
 "iTeo",
 "JujuM", "MineFlex_B", "RainbowKni", "sictoa", "Sparrowc",
-"the op b", "TieTie", "Twiggy", "X_R", "xXB",
+"MayUnderFlowers", "TieTie", "Twiggy", "X_R", "xXB",
 "ArnoobE", "Azurite", "Catw", "Charito", "CloudyS",
 "cloverp", "Cohaki", "ConvexP", "Deckardv", "Funo'",
 "goobrey", "GreenieG", "Heronix", "IceKeyH",
 "931b7d8d-ef74-4da6-8e90-800e6ef1559c",
 "italic177", "Koopa4", "LemonV",
 "5696ca02-91dd-42ff-a8c2-bb5380e2b224",
-"PaniniP", "pfysc", "Pink man", "Snoozingn", "thanos", "ThePinkB",
+"PaniniP", "pfysc", "Pink man", "Snoozingn", "twpaz.", "ThePinkB",
 "YellowEle", "YoshiAwes", "Yuak",
 "8b15177a-dad3-45b4-85ae-7826b5985ad9",
 "$Ee", "aaronvx", "Algotis", "AnEp", "avocadoe", "Brandy?",
@@ -670,7 +671,7 @@ add_prediction("Pink man", "11B", [
 "tr_", "2 L", "Alley%", "Cpi", "eyBH", "FishO",
 "fryuaj", "GreenTree", "lipu Kij", "Nateo", "NorthEastB",
 "Real presi", "Spicyman3", "Strawbur", "Tak Aj", "taopy",
-"Zettex", "Bromeo W", "figgyc", "Nosl", "ribos"
+"Zettex", "bromii", "figgyc", "Nosl", "ribos"
 ]);
 
 add_prediction("Snoozingnewt", "11B", [
@@ -747,7 +748,7 @@ add_prediction("Snoozingnewt", "11B", [
 "Purplegaze",
 "recc",
 "scorb",
-"Shorky",
+"reremiau",
 "SinisterShovel",
 "smoov22",
 "Snoozingnewt",
@@ -756,9 +757,9 @@ add_prediction("Snoozingnewt", "11B", [
 "stephan12387",
 "Swift Smartypants",
 "terminatedslime",
-"thanos whale.",
+"twpaz.",
 "The Ilucuthen Empire",
-"the op boss",
+"MayUnderFlowers",
 "thenamesh",
 "ThePinkBunnyEmpire",
 "TieTiePerson",
@@ -848,7 +849,7 @@ add_prediction("MoltenAshes", "11B", [
 "RainbowKnight",
 "recc",
 "scorb",
-"Shorky",
+"reremiau",
 "sictoabu",
 "SinisterShovel",
 "Snoozingnewt",
@@ -859,9 +860,9 @@ add_prediction("MoltenAshes", "11B", [
 "Swift Smartypants",
 "terminatedslime",
 "Thane",
-"thanos whale.",
+"twpaz.",
 "The Ilucuthen Empire",
-"the op boss",
+"MayUnderFlowers",
 "ThePinkBunnyEmpire",
 "TieTiePerson",
 "tr_",
@@ -878,6 +879,8 @@ add_prediction("MoltenAshes", "11B", [
 "YoshiAwesum",
 "Yume Flamigiri",
 ]);
+
+add_prediction("Catworld","12B",["8b15177a-dad3-45b4-85ae-7826b5985ad9","#1 sigma Rizz lord","$EeveeLikesBREAD$","08_BTR","4DJumpman256","ALITL","AnEpik","ArnoobExtra","ashaisasmasha","avocadoexists","Azurite","Brandy?","Catworld","cereseries","Charito","CloudySkyes","cloverpepsi","bab372ed-5272-4f6f-a1eb-b79fd6da456a","Cohaki","ConvexProjects","CringeCat","Cube492","570f2536-86e6-4453-8280-c7d8e5f956e5","Deckardv","DogeBone3","ElevenWordsOfWower","fonda1515","garf","Gizmote","gmo","goobrey","Grammar Lee","Graysandwich","GreenieGuest","Heronix","IceKeyHammer","931b7d8d-ef74-4da6-8e90-800e6ef1559c","IntersectingPlanes","iRDM","iTeoti","itsmearni","Ixcors","J_duude","956761d0-e8d6-4f5b-b0d3-72fb222c05bb","Juhmatok","JujuMas","Juliansl","Kinderdacat","Koopa472","kuminda.water.supply","LemonVenom","losered","mazuat","5696ca02-91dd-42ff-a8c2-bb5380e2b224","MineFlex_B","Moralitea","MysteriousGrimReaper","Nonexistential","normalben","Onchú","Paintspot Infez","Parallel Paperbacks","PengiQuin","pfysche","Pink man","PlasmicTrojan","PoliteCheese1414","Purplegaze","RainbowKnight","RAMTurtle","random.123","recc","scorb","reremiau","sictoabu","SinisterShovel","Snoozingnewt","SooperHighper","Sparrowcat","Srimochi","stephan12387","Swift Smartypants","terminatedslime","twpaz.","The Ilucuthen Empire","MayUnderFlowers","ThePinkBunnyEmpire","TieTiePerson","tr_","Twiggy","Water Chestnut","whitecyclosa","WholeNote1","X_Ry","xXBombs_AwayXx","Xyloba","YellowElectric","Yuakim","Yume Flamigiri","Zettex"])
 
 for (let i = 0; i < contestants.length; i++){
 	let c = contestants[i];
@@ -917,8 +920,9 @@ top_element.addEventListener("click", function () {draw_table((a, b) => (a.name.
 table_toprow.append(top_element)
 let status_element = document.createElement("th");
 status_element.setAttribute("rowspan", 2);
-status_element.appendChild(document.createTextNode("Lives"));
+status_element.appendChild(document.createTextNode("❤"));
 status_element.addEventListener("click", function () {draw_table((a, b) => (b.get_current_lives() - a.get_current_lives()));});
+status_element.setAttribute("title","Lives");
 table_toprow.append(status_element)
 let favor_element = document.createElement("th");
 favor_element.setAttribute("rowspan", 2);
@@ -967,7 +971,7 @@ function draw(){
 			let prediction_element = document.createElement("td");
 			prediction_element.style.backgroundColor = color_list[c["lives" + predictions[j][1].slice(0, -1)]];
 			if (predictions[j][2].includes(c)){
-				prediction_element.appendChild(document.createTextNode("V"));
+				prediction_element.appendChild(document.createTextNode("✓"));
 			}
 			contestant_row.append(prediction_element);
 		}
@@ -984,3 +988,5 @@ function draw_table(cmp_func){
 }
 
 draw_table((a) => 0);
+
+document.getElementById("load").remove();

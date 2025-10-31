@@ -10,10 +10,47 @@ h2 {
 	font-family: "Interstate", "Overpass", sans-serif;
 }
 
+table {
+	table-layout: fixed;
+	width: max(90%, 100em);
+	margin: auto;
+}
+
+th {
+	background: #303389;
+	color: #FFFFFF;
+	padding: 0 5px;
+}
+
+tr:nth-of-type(1) th:not([rowspan="2"]) {
+	writing-mode: vertical-rl;
+	text-align: right;
+	padding: 5px 0;
+	height: 80px;
+}
+
+th:nth-of-type(1) {
+	width: 24em;
+}
+
+th:nth-of-type(2), th:nth-of-type(3) {
+	width: 2em;
+}
+
+
 td {
+	text-align: center;
+	padding: 0 8px;
+	font-variant-numeric: tabular-nums;
+}
+
+td:nth-of-type(1) {
 	text-align: left;
-	padding-left: 15px;
-	padding-right: 15px;
+	font-variant-numeric: lining-nums;
+}
+
+td:nth-of-type(2), td:nth-of-type(3) {
+	text-align: right;
 }
 
 .number {
@@ -23,12 +60,15 @@ td {
 	padding-right: 15px;
 }
 
-th {
-	background: #303389;
-	color: #FFFFFF;
-	padding-left: 15px;
-	padding-right: 15px;
+
+
+
+thead {
+	position: sticky;
+	top:2px;
 }
+
+
 
 .prize {
 	background: #C2FFBF;
