@@ -244,15 +244,27 @@ function show_contestant_data(idx){
 function simulate_round () {
 	current_episode += 1;
 	// let everyone respond
-	let response_count = 0;
+	
 	let alive_count = 0;
+
+	for (let i = 0; i < contestants.length; i++) {
+		if (contestants[i].lives != 0) {alive_count += 1;}
+	}
+
+	if (alive_count <= 20) { // This is a super clunky hack to ensure that UDRPs are given out at the F20 - carbon
+		for (let i = 0; i < contestants.length; i++) {
+			if (contestants[i].lives != 0) {contestants[i].responses += 1;}
+		}
+	}
+
+	let response_count = 0;
+
 	for (let i = 0; i < contestants.length; i++){
 		c = contestants[i];
 		if (c.lives == 0){
 			c["current_score"] = Number.NEGATIVE_INFINITY;
 		} else if (Math.random() < c.dnp_rate){ // the contestant DNP'd
 			c["current_score"] = -1e+30;
-			alive_count += 1;
 		} else {
 			let scores = [];
 			for (let r = 0; r < c.responses; r++){
@@ -263,12 +275,38 @@ function simulate_round () {
 			c["drp_score"] = scores[1];
 			c["trp_score"] = scores[2];
 			response_count += 1;
-			alive_count += 1;
 		}
 	}
 	contestants.sort((a, b) => b.current_score - a.current_score);
 	let prize_spots = Math.round(response_count * 0.05);
-	let safe_spots = Math.round(response_count * (current_episode >= 10 ? 0.51 : 0.51));
+
+	let safe_spots;
+
+	if (alive_count <= 20) { // Final 20
+		safe_spots = Math.max(response_count - Math.ceil(response_count / 7), 1); // Placeholder, not official
+	} else if (current_episode >= 18) { // Life Decay Part II (18B)
+		safe_spots = Math.ceil(response_count * 0.70);
+	} else {
+		safe_spots = Math.ceil(response_count * 0.51);
+	}
+
+	// how many damn times do i have to iterate over the contestant list in order to determine a statistic
+	// Check the eliminations in a round
+
+	let elim_ranks = [];
+	for (let i = 0; i < contestants.length; i++) {
+		if (i >= safe_spots && !(contestants[i].lives - 1)) {elim_ranks.push(i);}
+	}
+
+	// If someone reads these comments then I'm sorry for being so bad at ~~JavaScript~~ math actually, I don't know how to math
+
+	if (alive_count - elim_ranks.length < 20 && alive_count > 20) {
+		safe_spots = elim_ranks[19 - alive_count + elim_ranks.length] + 1; // Expand the safe zone to ensure a round of 20 happens
+	}
+
+	// I feel like I wasted so much time implementing this. Oh well, c'est la vie, ou quelquechose comme ça, j'suis pas français. 
+	// - Carbon
+
     let round_title = document.getElementById("counter");
     round_title.textContent = "Round " + current_episode + ": " + response_count + "/" + alive_count + " responded";
     let table_body = document.getElementById("leaderboard");
@@ -330,8 +368,12 @@ function simulate_round () {
 			}
 		}
 
-		// life decay
-		if(current_episode >= 10 && c.lives > 3) {
+		
+		if (
+			(current_episode >= 10 && c.lives > 3)	||				// life decay
+			(current_episode == 17 && c.lives == 3)	||				// life decay R17
+			(alive_count - elim_ranks.length <= 20 && c.lives == 2)	// life decay F20
+		) {
 			c.lives -= 1
 			c.responses += 1
 		}
