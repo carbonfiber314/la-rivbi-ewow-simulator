@@ -269,7 +269,14 @@ function simulate_round () {
 		}
 	}
 	contestants.sort((a, b) => b.current_score - a.current_score);
-	let prize_spots = Math.round(response_count * 0.05);
+	
+	let prize_spots;
+	
+	if (current_episode >= 17) { // ty eeveeluv for reminding it
+		prize_spots = Math.round(response_count * 0.10);
+	} else { 
+		prize_spots = Math.round(response_count * 0.05);
+	}
 
 	let safe_spots;
 
