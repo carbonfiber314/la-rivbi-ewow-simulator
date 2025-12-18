@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-	font-family: "Overpass";
+	font-family: "Overpass", sans-serif;
 	color-scheme: light dark;
 
 	--lives-0: light-dark(#D7C6C6, #6b5757);
