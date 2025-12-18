@@ -78,20 +78,6 @@ function get_rank_rep(c, current_ep){
 	return result;
 }
 
-color_list = [
-"#D7C6C6",
-"#F2D4D4",
-"#F4EBCA",
-"#D4F2D7",
-"#D2F3FB",
-"#D1E9FF",
-"#D3DFFF",
-"#D6D3FF",
-"#DFCAFF",
-"#EFCAFF",
-"#FFFFFF"
-];
-
 function to_str(num, decimal){
 	return (Math.round(num * (10 ** decimal)) / (10 ** decimal)).toFixed(decimal);
 }
@@ -189,21 +175,26 @@ function reset_simulation(){
 		name_element.appendChild(document.createTextNode(c.name));
 		let lives_element = document.createElement("td");
 		lives_element.appendChild(document.createTextNode(c["lives" + total_eps]));
+		lives_element.style.backgroundColor = `var(--lives-${c.lives})`;
+
 		let score_element = document.createElement("td");
 		let score_text = "DNP";
 		if (c["rank" + total_eps] <= rr_contestants[total_eps]){
 			score_text = to_performance_str(c[basis + total_eps]);
 		}
 		score_element.appendChild(document.createTextNode(score_text));
-		lives_element.style.backgroundColor = color_list[c.lives];
+		score_element.colSpan = 1;
+
+		// TODO: make previous DRPs and TRPs show up here
+
 		if(c["rank" + total_eps] <= prize_ranks[total_eps]){
-			table_row.setAttribute("class", "prize");
+			table_row.setAttribute("class", "prize-drp");
 		}else if(c["rank" + total_eps] <= safe_ranks[total_eps]){
 			table_row.setAttribute("class", "safe");
 		}else{
 			table_row.setAttribute("class", "death");
 		}
-		table_row.append(rank_element, name_element, lives_element, score_element);
+		table_row.append(rank_element, name_element, lives_element, score_element, document.createElement("td"), document.createElement("td"));
 		table_body.append(table_row);
 	}
 }
@@ -298,14 +289,14 @@ function simulate_round () {
 		if (i >= safe_spots && !(contestants[i].lives - 1)) {elim_ranks.push(i);}
 	}
 
+
 	// If someone reads these comments then I'm sorry for being so bad at ~~JavaScript~~ math actually, I don't know how to math
-
-	if (alive_count - elim_ranks.length < 20 && alive_count > 20) {
-		safe_spots = elim_ranks[19 - alive_count + elim_ranks.length] + 1; // Expand the safe zone to ensure a round of 20 happens
-	}
-
-	// I feel like I wasted so much time implementing this. Oh well, c'est la vie, ou quelquechose comme ça, j'suis pas français. 
-	// - Carbon
+		/*
+			if (alive_count - elim_ranks.length < 20 && alive_count > 20) {
+				safe_spots = elim_ranks[19 - alive_count + elim_ranks.length] + 1; // Expand the safe zone to ensure a round of 20 happens
+			}
+		*/
+	// future carbon (2025-12-15), this actually might be questionable to do.
 
     let round_title = document.getElementById("counter");
     round_title.textContent = "Round " + current_episode + ": " + response_count + "/" + alive_count + " responded";
@@ -321,25 +312,32 @@ function simulate_round () {
 		name_element.appendChild(document.createTextNode(c.name));
 		let lives_element = document.createElement("td");
 		let score_element = document.createElement("td");
+
 		let score_text = "";
 		if(c.lives == 0){
 			score_text = "Eliminated R" + c.final_ep;
+			score_element.colSpan = 3;
 		}else if(c.current_score < -100000){
 			score_text = "DNP";
 			c["rank" + current_episode] = "DNP";
 		}else{
 			score_text = to_performance_str(c.current_score);
 			c["rank" + current_episode] = i + 1;
-			if(c.drp_score != undefined){
-				score_text += " (DRP: " + to_performance_str(c.drp_score);
-				if(c.trp_score != undefined){
-					score_text += "; TRP: " + to_performance_str(c.trp_score) + "";
-				}
-				score_text += ")";
-			}
 		}
 
-		score_element.appendChild(document.createTextNode(score_text));
+		score_element.appendChild(document.createTextNode(score_text))
+
+		let score_element_drp = document.createElement("td");
+		let score_element_trp = document.createElement("td");
+
+		if(c.drp_score != undefined){
+			score_element_drp.appendChild(document.createTextNode(to_performance_str(c.drp_score)));
+		}
+		if(c.trp_score != undefined){
+			score_element_trp.appendChild(document.createTextNode(to_performance_str(c.trp_score)));
+		}
+
+
 		c.prev_lives = c.lives;
 		c.responses = 1;
 		if(c.prev_lives == 0){
@@ -351,7 +349,7 @@ function simulate_round () {
 			if (current_episode >= 10){
 				c.responses += 1;
 			}
-			table_row.setAttribute("class", "prize");
+			table_row.setAttribute("class", "prize-drp");
 			c["status" + current_episode] = "Prized";
 		}else if(i < safe_spots){
 			// do nothing
@@ -383,8 +381,13 @@ function simulate_round () {
 		table_body.append(table_row);
 		let lives_arrow = c.lives > c.prev_lives ? "\u2191 " : c.lives == c.prev_lives ? "\u2022 " : "\u2193 ";
 		lives_element.appendChild(document.createTextNode(lives_arrow + c.lives));
-		lives_element.style.backgroundColor = color_list[c.lives];
-		table_row.append(rank_element, name_element, lives_element, score_element);
+		lives_element.style.backgroundColor = `var(--lives-${c.lives})`;
+		
+		if (c.prev_lives != 0) {
+			table_row.append(rank_element, name_element, lives_element, score_element, score_element_drp, score_element_trp);
+		} else {
+			table_row.append(rank_element, name_element, lives_element, score_element);
+		}
 	}
 }
 //simulate_round();

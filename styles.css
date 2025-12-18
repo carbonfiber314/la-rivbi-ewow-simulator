@@ -1,75 +1,29 @@
-h1 {
-	text-align: center;
-}
-h2 {
-	text-align: center;
+:root {
+	font-family: "Overpass";
+	color-scheme: light dark;
+
+	--lives-0: light-dark(#D7C6C6, #6b5757);
+	--lives-1: light-dark(#F2D4D4, #ae5555);
+	--lives-2: light-dark(#F4EBCA, #99872e);
+	--lives-3: light-dark(#D4F2D7, #4f9647);
+	--lives-4: light-dark(#D2F3FB, #4f8c9e);
+	--lives-5: light-dark(#D1E9FF, #487ebe);
+	--lives-6: light-dark(#D3DFFF, #516abf);
+	--lives-7: light-dark(#D6D3FF, #5854ba);
+	--lives-8: light-dark(#DFCAFF, #8954ba);
+	--lives-9: light-dark(#EFCAFF, #ae54ba);
+	--lives-10: light-dark(#ffd7fd, #ba5484);
 }
 
-* {
+body {
+	text-align: center;
+	max-width: 60em;
 	margin: auto;
-	font-family: "Interstate", "Overpass", sans-serif;
+	padding: 1em;
+	background: light-dark(#FFF, #111);
+	color: light-dark(#000, #FFF);
 }
 
-td {
-	text-align: left;
-	padding-left: 15px;
-	padding-right: 15px;
+h1, h2, h3, p {
+	margin: 0.1em 0;
 }
-
-.number {
-	text-align: right;
-	font-family: "Consolas", monospace;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-th {
-	background: #303389;
-	color: #FFFFFF;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.prize {
-	background: #C2FFBF;
-}
-
-.safe {
-	background: #FFFFFF;
-}
-
-.death {
-	background: #F8B7BF;
-}
-
-.gen-info {
-	background: #FFFF9B;
-}
-
-.footer-prize {
-	background: #A9F0A6;
-}
-
-.footer-safe {
-	background: #CBCBCB;
-}
-
-.footer-death {
-	background: #DF9EA6;
-}
-
-.footer-gen-info {
-	background: #F8E28C;
-}
-
-.text_center {
-	text-align: center;
-}
-
-.text_td {
-	text-align: left;
-	font-family: sans-serif;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-

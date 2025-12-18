@@ -2,50 +2,117 @@
 
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Not quite la rivbi's Github page</title>
-  <link href="styles.css" rel="stylesheet" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>la rivbi's EWOW Tools</title>
+	<link href="styles.css" rel="stylesheet" />
+
+	<style>
+		.cards {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			gap: 0.5em;
+	
+			text-align: left;
+	
+	
+			&>div {
+				background-color: light-dark(#1111,#fff1);
+				padding: 1em;
+	
+	
+				&>a:has(h2) {
+					text-decoration: none;
+					color: light-dark(#000,#fff);
+					transition: 200ms;
+	
+					:hover {
+						text-decoration: 1px underline;
+					}
+				}
+			}
+	
+	
+			& h2 {
+				margin: 0.2em 0;
+				letter-spacing: -1px;
+				line-height: 0.8;
+			}
+	
+			& p {
+				margin: auto;
+	
+			}
+	
+	
+		}
+	
+		@media (max-width: 540px) {
+			.cards {
+				grid-template-columns: repeat(1, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+			}
+		}
+	</style>
 </head>
 
 <body>
 
-<h1>la rivbi's Github Page</h1>
+<h1>la rivbi's EWOW Tools</h1>
 
 <p class="text_center">
-Hello! I'm not la rivbi, the EWOW contestant who places 7873rd alphabetically.<br>However, here are some updated versions of their tools. 
-</p>
-<hr>
-<p class="text_center">
-While you're here, Why not play with some EWOW data? (Data all updated to EWOW 15B)
+Play with some EWOW data! (Data all updated to EWOW 16B)
 <br>
-<a href="histogram/histogram.html">Histogram Tool</a>
- - Make your own histogram!
-<a href="histogram/info.html">More explanations</a>
-<br>
-<a href="predictions/test.html">Make You Own Alumni Prediction Tool</a>
- - Can you make an alumni prediction <b>without</b> knowing who you're predicting?
-<br>
-<a href="alumni/test.html">Alumni Picks Compilation</a>
- - Other people's alumni picks... and how they age so far.
-<br>
-<a href="simulator/test.html">EWOW Simulator</a>
- - Because why not.
-<br>
-<a href="simulator/plus.html">EWOW Simulator<sub>Custom</sub></a>
- - CarbonFiber succumbed to scope creep and this happened.
-</p>
 
-<hr>
-<p class="text_center">
-<a href="https://la-rivbi.github.io/gallery/index.html">la rivbi's EWOW Art Gallery</a>
-</p>
-<hr>
-<p class="text_center">
-I'm also on Discord (la_rivbi) and <a href="https://www.youtube.com/@la-rivbi">Youtube</a>.
-If you see "la rivbi" elsewhere... it's probably not me. Let me know in that case.
-</p>
-<hr>
-<p class="text_center">These updated versions are provided by CarbonFiber. If you would like to contact me, I'm on Discord (carbonfiber314).</p>
 
+<nav class="cards">
+
+	
+	<div>
+		<a href="histogram/histogram.html">
+			<h2>Histogram Tool</h2>
+			<p>Make your own histogram!</p>
+		</a>
+
+		<a class="info" href="histogram/info.html">More explanations</a>
+	</div>
+
+	<div>
+		<a href="predictions/test.html">
+			<h2>Make Your Own Alumni Prediction Tool</h2>
+			<p>Can you make an alumni prediction <em>without</em> knowing who you're predicting?</p>
+		</a>
+	</div>
+	
+	<div>
+		<a href="alumni/test.html">
+			<h2>Alumni Picks Compilation</h2>
+			<p>Other people's alumni picks... and how they age so far.</p>
+		</a>
+	</div>
+
+	<div>
+		<a href="simulator/test.html">
+			<h2>EWOW Simulator</h2>
+			<p>Because why not.</p>
+		</a>
+	</div>
+
+	<br>
+	
+
+
+</nav>
+
+
+<p class="text_center">
+	For completeness's sake: <a href="https://la-rivbi.github.io/gallery/index.html">la rivbi's EWOW Art Gallery</a> (offsite)</p>
+<hr>
+
+<h2>About</h2>
+	<p>This website provides an updated version of la rivbi’s EWOW tools, originally hosted on <a href="https://la-rivbi.github.io/">their github page.</a></p>
+	<p>la rivbi may be found on Discord (@la_rivbi) and on YouTube <a href="https://www.youtube.com/@la-rivbi">(@la-rivbi)</a>.</p>
+	<p>These tools are currently maintained by CarbonFiber; if you would like to contact me, this is my Discord: (@carbonfiber314)</p>
+	<p>This website's source code may be found <a href="https://github.com/carbonfiber314/la-rivbi-ewow-simulator/">here</a></p>
 </body>
 </html>

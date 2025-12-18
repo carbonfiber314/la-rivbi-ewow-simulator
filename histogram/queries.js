@@ -87,7 +87,7 @@ function get_group_name(name, num_start, num_step, num_end){
 	}
 }
 
-let uppercase = "QAZWSXEDCRFVTGBYHNUJMIKLOP";
+let uppercase = "QAZWSXEDCRFVTGBYHNUJMIKLOP"; // certainly
 let lowercase = "qazwsxedcrfvtgbyhnujmikolp";
 let digits = "1234567890";
 let letters = uppercase + lowercase;

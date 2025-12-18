@@ -2,10 +2,11 @@
 
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>la rivbi's Histogram Tool</title>
-  <link href="styles.css" rel="stylesheet" />
-  <script src="https://cdn.plot.ly/plotly-2.31.1.min.js" charset="utf-8"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>la rivbi's Histogram Tool</title>
+	 <link href="/styles.css" rel="stylesheet" />
+	<link href="styles.css" rel="stylesheet" />
+	<script src="https://cdn.plot.ly/plotly-2.31.1.min.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -20,24 +21,25 @@
 <div id="tester" class="center"></div>
 
 <p class="text_center">
-  Select the round you want to make histograms of: 
-  <select id="ep_select">
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-    <option value="13">13</option>
-    <option value="14">14</option>
-    <option selected value="15">15</option>
-  </select>
+	Select the round you want to make histograms of: 
+	<select id="ep_select">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option selected value="16">16</option>
+	</select>
 </p>
 
 <p id="instruction-1" class="text_center">
@@ -71,37 +73,37 @@ You can select the colors from the table and click "Recolor Histogram" to change
 <p id="temp"></p>
 
 <table class = "center">
-  <thead>
-    <tr>
-      <th scope="col">Category</th>
-      <th scope="col">Count</th>
-      <th scope="col">Average</th>
-      <th scope="col"># -1 Life</th>
-      <th scope="col"># Safe</th>
-      <th scope="col"># +1 Life</th>
-      <th scope="col">% -1 Life</th>
-      <th scope="col">% Safe</th>
-      <th scope="col">% +1 Life</th>
-      <th scope="col">Color</th>
-    </tr>
-  </thead>
-  <tbody id="categories">
-  </tbody>
-  <tfoot>
-    <!-- These values are hardcoded -->
-    <tr>
-      <th scope="row">Overall</th>
-      <td id="footer-all" class="footer-gen-info"></td>
-      <td id="footer-avg" class="footer-gen-info"></td>
-      <td id="footer-death-count" class="footer-death"></td>
-      <td id="footer-safe-count" class="footer-safe"></td>
-      <td id="footer-prize-count" class="footer-prize"></td>
-      <td id="footer-death-share" class="footer-death"></td>
-      <td id="footer-safe-share" class="footer-safe"></td>
-      <td id="footer-prize-share" class="footer-prize"></td>
-      <td class="footer-safe text_center">None</td>
-    </tr>
-  </tfoot>
+	<thead>
+		<tr>
+			<th scope="col">Category</th>
+			<th scope="col">Count</th>
+			<th scope="col">Average</th>
+			<th scope="col"># -1 Life</th>
+			<th scope="col"># Safe</th>
+			<th scope="col"># +1 Life</th>
+			<th scope="col">% -1 Life</th>
+			<th scope="col">% Safe</th>
+			<th scope="col">% +1 Life</th>
+			<th scope="col">Color</th>
+		</tr>
+	</thead>
+	<tbody id="categories">
+	</tbody>
+	<tfoot>
+		<!-- These values are hardcoded -->
+		<tr>
+			<th scope="row">Overall</th>
+			<td id="footer-all" class="footer-gen-info"></td>
+			<td id="footer-avg" class="footer-gen-info"></td>
+			<td id="footer-death-count" class="footer-death"></td>
+			<td id="footer-safe-count" class="footer-safe"></td>
+			<td id="footer-prize-count" class="footer-prize"></td>
+			<td id="footer-death-share" class="footer-death"></td>
+			<td id="footer-safe-share" class="footer-safe"></td>
+			<td id="footer-prize-share" class="footer-prize"></td>
+			<td class="footer-safe text_center">None</td>
+		</tr>
+	</tfoot>
 
 <script src="queries_all.js"></script>
 <p class="text_center">

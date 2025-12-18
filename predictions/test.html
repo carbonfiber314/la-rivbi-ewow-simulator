@@ -4,6 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>la rivbi's Make Your Own EWOWlumni Prediction Tool</title>
+  <link href="/styles.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
 </head>
 
@@ -22,13 +23,13 @@
       <th scope="col">1</th>
       <th scope="col">2</th>
       <th scope="col">3</th>
-      <th scope="col">4</th>
-      <th scope="col">5</th>
-      <th scope="col">6</th>
-      <th scope="col">7</th>
-      <th scope="col">8</th>
-      <th scope="col">9</th>
-      <th scope="col">10</th>
+      <th scope="col" hidden>4</th>
+      <th scope="col" hidden>5</th>
+      <th scope="col" hidden>6</th>
+      <th scope="col" hidden>7</th>
+      <th scope="col" hidden>8</th>
+      <th scope="col" hidden>9</th>
+      <th scope="col" hidden>10</th>
     </tr>
   </thead>
   <tbody>
@@ -37,26 +38,26 @@
       <td id = "1_assessed" class = "number"></td>
       <td id = "2_assessed" class = "number"></td>
       <td id = "3_assessed" class = "number"></td>
-      <td id = "4_assessed" class = "number"></td>
-      <td id = "5_assessed" class = "number"></td>
-      <td id = "6_assessed" class = "number"></td>
-      <td id = "7_assessed" class = "number"></td>
-      <td id = "8_assessed" class = "number"></td>
-      <td id = "9_assessed" class = "number"></td>
-      <td id = "10_assessed" class = "number"></td>
+      <td id = "4_assessed" class = "number" hidden></td>
+      <td id = "5_assessed" class = "number" hidden></td>
+      <td id = "6_assessed" class = "number" hidden></td>
+      <td id = "7_assessed" class = "number" hidden></td>
+      <td id = "8_assessed" class = "number" hidden></td>
+      <td id = "9_assessed" class = "number" hidden></td>
+      <td id = "10_assessed" class = "number" hidden></td>
     </tr>
     <tr>
       <th scope="row"> # total</th>
       <td id = "1_total" class = "number"></td>
       <td id = "2_total" class = "number"></td>
       <td id = "3_total" class = "number"></td>
-      <td id = "4_total" class = "number"></td>
-      <td id = "5_total" class = "number"></td>
-      <td id = "6_total" class = "number"></td>
-      <td id = "7_total" class = "number"></td>
-      <td id = "8_total" class = "number"></td>
-      <td id = "9_total" class = "number"></td>
-      <td id = "10_total" class = "number"></td>
+      <td id = "4_total" class = "number" hidden></td>
+      <td id = "5_total" class = "number" hidden></td>
+      <td id = "6_total" class = "number" hidden></td>
+      <td id = "7_total" class = "number" hidden></td>
+      <td id = "8_total" class = "number" hidden></td>
+      <td id = "9_total" class = "number" hidden></td>
+      <td id = "10_total" class = "number" hidden></td>
     </tr>
   </tbody>
 </table>
@@ -162,11 +163,15 @@
       <th scope="row">EWOW 15</th>
       <td id="response15"></td>
     </tr>
+    <tr>
+      <th scope="row">EWOW 16</th>
+      <td id="response16"></td>
+    </tr>
   </tbody>
 </table>
 <h2 id="lives" class="text_center">Current Lives: 0</h2>
 <p id="alumni_count_text" class="text_center">
-Input the number of EWOWlumni you think there will be: <input id="alumni_count" type="number" value="100" min="80" max="128"/>
+Input the number of EWOWlumni you think there will be: <input id="alumni_count" type="number" value="100" min="70" max="125"/>
 </p>
 <p id="question" class="text_center">
 On the scale of 0 to 10, how likely do you think <br> this contestant will make it into alumni?

@@ -25,35 +25,45 @@ th {
 }
 
 .prize {
-	background: #C2FFBF;
+	background: light-dark(#C2FFBF,#034600);
+}
+
+.prize-drp {
+	background: light-dark(#fff5bf,#463300);
 }
 
 .safe {
-	background: #FFFFFF;
+	background: light-dark(#FFF,#222222);
 }
 
 .death {
-	background: #F8B7BF;
+	background: light-dark(#F8B7BF, #47010a);
 }
 
+.already-dead {
+	background: light-dark(#000,#111);
+	color: light-dark(#fff,#bbb);
+}
+
+
 .gen-info {
-	background: #FFFF9B;
+	background: light-dark(#9bc6ff, #002550);
 }
 
 .footer-prize {
-	background: #A9F0A6;
+	background: light-dark(#A9F0A6,#064904);
 }
 
 .footer-safe {
-	background: #CBCBCB;
+	background: light-dark(#CBCBCB, #5e5e5e);
 }
 
 .footer-death {
-	background: #DF9EA6;
+	background: light-dark(#DF9EA6, #3b050c);
 }
 
 .footer-gen-info {
-	background: #F8E28C;
+	background: light-dark(#9bc6ff, #002550);
 }
 
 .text_center {

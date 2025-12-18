@@ -1,71 +1,87 @@
-h1 {
-	text-align: center;
-}
-h2 {
-	text-align: center;
-}
 
-* {
+
+table {
 	margin: auto;
-	font-family: "Interstate", "Overpass", sans-serif;
-}
-
-td {
-	text-align: left;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.number {
-	text-align: right;
-	font-family: "Consolas", monospace;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 th {
 	background: #303389;
-	color: #FFFFFF;
+	color: #FFF;
+	padding: 2px 4px;
+}
+
+fieldset {
+	max-width: 400px;
+	margin: auto;
+}
+
+.simulator-results {
+	table-layout: fixed;
+	min-width: 600px;
+	overflow: auto;
+}
+
+.simulator-results tr:nth-of-type(1) > th:nth-of-type(1) {
+	width: 3ch;
+}
+
+.simulator-results tr:nth-of-type(1) > th:nth-of-type(2) {
+	width: max-content;
+}
+
+.simulator-results tr:nth-of-type(1) > th:nth-of-type(3) {
+	width: 3ch;
+}
+
+
+.simulator-results tr:nth-of-type(2) th {
+	width: 4.5em;
+}
+
+#leaderboard td:not(:nth-of-type(2)) {
+	font-variant-numeric: tabular-nums;
+	text-align: right;
+}
+
+#leaderboard td:is(:nth-of-type(1), :nth-of-type(3)) {
+	text-align: center;
+}
+
+
+td {
+	text-align: left;
+	padding: 4px 4px;
+}
+
+.number {
+	text-align: right;
+	font-family: "Overpass Mono", "Consolas", monospace;
 	padding-left: 15px;
 	padding-right: 15px;
 }
 
+
 .prize {
-	background: #C2FFBF;
+	background: light-dark(#C2FFBF,#034600);
+}
+
+.prize-drp {
+	background: light-dark(#fff5bf,#463300);
 }
 
 .safe {
-	background: #FFFFFF;
+	background: light-dark(#FFF,#222222);
 }
 
 .death {
-	background: #F8B7BF;
+	background: light-dark(#F8B7BF, #47010a);
 }
 
 .already-dead {
-	background: #000000;
-	color: #FFFFFF;
+	background: light-dark(#000,#111);
+	color: light-dark(#fff,#bbb);
 }
 
-.gen-info {
-	background: #FFFF9B;
-}
-
-.footer-prize {
-	background: #A9F0A6;
-}
-
-.footer-safe {
-	background: #CBCBCB;
-}
-
-.footer-death {
-	background: #DF9EA6;
-}
-
-.footer-gen-info {
-	background: #F8E28C;
-}
 
 .text_center {
 	text-align: center;

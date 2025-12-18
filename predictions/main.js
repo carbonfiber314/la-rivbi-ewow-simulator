@@ -11,7 +11,7 @@ Then, click "I think I've seen everyone that can alumni", then \
 your prediction table wil be generated automatically! 
 
 You can choose the number of EWOWlumnis you think there will be. \
-The default is 100, but you can choose any number between 80 and 128.
+The default is 100, but you can choose any number between 70 and 125.
 
 The order of the contestants presented is by their performances so far, \
 from best to worst (with some randomization). You'll see some 1 or 2- \
@@ -30,7 +30,7 @@ you recieved when saving, and you can start from where you've stopped. \
 The number of EWOWlumni isn't saved though, you will have to save \
 it by yourself. It's just a number, right?
 
-Happy predicting! You can ask me (la rivbi) for any questions.
+Happy predicting! 
 `);
 
 let contestants = contestants_master.filter((c) => (c.get_current_lives() > 0));
@@ -88,7 +88,7 @@ for(let i = 0; i < contestants.length; i++){
 	if(contestants[i] != undefined){
 		let c = contestants[i];
 		relative_ranks = [];
-		rr_contestants = [0, 16607, 8623, 8062, 5626, 4016, 2767, 2152, 1479, 1095, 830, 600, 452, 358, 278, 213];
+		rr_contestants = [0, 16607, 8623, 8062, 5626, 4016, 2767, 2152, 1479, 1095, 830, 600];
 		rr_sum = 0
 		for (let ep = 1; ep <= total_eps; ep++){
 			relative_ranks[ep - 1] = 1 - (c["rank" + ep] - 1) / (rr_contestants[ep] - 1);
@@ -100,9 +100,11 @@ for(let i = 0; i < contestants.length; i++){
 		}else{
 			seed_1 = c.get_current_lives() * 1000 // by lifes
 			seed_2 = 4300 + Math.min(relative_ranks[0] * 100 + relative_ranks[1] * 100 + relative_ranks[2] * 100 - 290, 0) * 50;
+			/*
 			if(relative_ranks.at(-2) < 0){ // don't consider it if the contestant dnp'd at least twice
 				seed_2 = 0
 			}
+			*/
 			seed_3 = 0
 			if (c.get_current_lives() >= 3){
 				seed_3 = 4000 + (rr_sum - total_eps + 3) * 1200 / total_eps;
@@ -165,20 +167,6 @@ function alumni_sort_key(a, b){
 	return result;
 }
 
-color_list = [
-"#D7C6C6",
-"#F2D4D4",
-"#F4EBCA",
-"#D4F2D7",
-"#D2F3FB",
-"#D1E9FF",
-"#D3DFFF",
-"#D6D3FF",
-"#DFCAFF",
-"#EFCAFF",
-"#FFFFFF"
-];
-
 function show_alumni_data(contestant_id){
 	let cc = contestants[contestant_id];
 	let text = "";
@@ -209,7 +197,7 @@ function get_result(){
 			if (r + c * 16 < alumni_count){
 				let new_text = document.createTextNode(contestants[alumni[r + c * 16]].name);
 				new_cell.appendChild(new_text);
-				new_cell.style.backgroundColor = color_list[contestants[alumni[r + c * 16]].get_current_lives()];
+				new_cell.style.backgroundColor = `var(--lives-${contestants[alumni[r + c * 16]].get_current_lives()})`
 				new_cell.addEventListener("click", function () {show_alumni_data(alumni[r + c * 16])});
 			} else {
 				new_cell.style.backgroundColor = "#CCCCCC";

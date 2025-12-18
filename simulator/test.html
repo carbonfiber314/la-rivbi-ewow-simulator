@@ -1,61 +1,75 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>la rivbi's EWOW Simulator</title>
+  <link href="/styles.css" rel="stylesheet" />
   <link href="styles.css" rel="stylesheet" />
+  <script src="../declarations.js"></script>
 </head>
 
 <body>
+  <h1>la rivbi's EWOW Simulator</h1>
 
-<script src="../declarations.js"></script>
-<script src="../load-master.js"></script>
-<h1>la rivbi's EWOW Simulator</h1>
+  <p>
+    <date>2025-10-31</date> - Updated for current Life Decay 2 plans
+  </p>
 
-<p class="text_center"><date>2025-10-31</date> - Updated for current Life Decay 2 plans</p>
+  <p>
+    <fieldset>
+      <legend>Options</legend>
+    <fieldset>
+      <legend>Simulation Basis</legend>
+      <select id="distribution_select">
+      <option selected value="gauss">Gaussian</option>
+      <option value="beta">Beta</option>
+    </select>
+    on
+    <select id="basis_select">
+      <option selected value="z-score">Z-score</option>
+      <option value="average">average percentile</option>
+      <option value="rr">relative rank</option>
+      <option value="sr">standardized rank</option>
+    </select>
+    </fieldset>
+    </fieldset>
+    
+  </p>
 
-<p class="text_center">
-  Select the basis of simulation: 
-  <select id="distribution_select">
-    <option selected value="gauss">Gaussian</option>
-    <option value="beta">Beta</option>
-  </select>
-  on 
-  <select id="basis_select">
-    <option selected value="z-score">Z-score</option>
-    <option value="average">average percentile</option>
-    <option value="rr">relative rank</option>
-    <option value="sr">standardized rank</option>
-  </select>
-</p>
+  <h2 id="counter">Loading...</h2>
+  <div>
+    <button id="next_round" type="button" class="center">Next Round</button>
+  </div>
+  <table class="simulator-results">
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2" title="Rank">★</th>
+        <th scope="col" rowspan="2">Name</th>
+        <th scope="col" rowspan="2" title="Lives">❤</th>
+        <th scope="col" id="performance" colspan="3">Z-Score</th>
+      </tr>
 
-<h2 id="counter">Round 7: 1828 remain</h2>
-<div class="text_center">
-<button id="next_round" type="button" class="center">Next Round</button>
-</div>
-<table class = "center">
-  <thead>
-    <tr>
-      <th scope="col">Rank</th>
-      <th scope="col">Name</th>
-      <th scope="col">Lives</th>
-      <th scope="col" id="performance">Z-Score</th>
-    </tr>
-  </thead>
-  <tbody id="leaderboard">
-  </tbody>
-</table>
+      <tr>
+        <th scope="col">—</th>
+        <th scope="col">DRP</th>
+        <th scope="col">TRP</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard">
+    </tbody>
+  </table>
 
-<p class="text_center">
-The parameters of the beta distribution for a contestant's performances are derived with <a href="https://stats.stackexchange.com/questions/12232/calculating-the-parameters-of-a-beta-distribution-using-the-mean-and-variance">this method</a>.
-</p>
-<p class="text_center">
-<a href="../index.html">Home</a>
-</p>
+  <small>The parameters of the beta distribution for a contestant's performances are derived with <a href="https://stats.stackexchange.com/questions/12232/calculating-the-parameters-of-a-beta-distribution-using-the-mean-and-variance">this method</a></small>
+  <p class="text_center">
+    <a href="../index.html">Home</a>
+  </p>
 
-<script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
-<script src="main.js"></script>
+  <script src="../load-master.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
+  <script src="main.js"></script>
 
 </body>
+
 </html>
