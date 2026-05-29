@@ -1,3 +1,5 @@
+
+
 h1 {
 	text-align: center;
 }
@@ -26,37 +28,63 @@ th {
 	padding: 0 5px;
 }
 
-tr:nth-of-type(1) th:not([rowspan="2"]) {
-	writing-mode: vertical-rl;
-	text-align: right;
-	padding: 5px 0;
-	height: 80px;
-}
-
-th:nth-of-type(1) {
-	width: 18em;
-}
-
-th:nth-of-type(2), th:nth-of-type(3) {
-	width: 2em;
-}
-
-
 td {
 	text-align: center;
 	padding: 0 8px;
 	font-variant-numeric: tabular-nums;
 }
 
-td:nth-of-type(1) {
-	text-align: left;
-	font-variant-numeric: lining-nums;
+.picks-table {
+	tr:nth-of-type(1) th:not([rowspan="2"]) {
+		writing-mode: vertical-rl;
+		text-align: right;
+		padding: 5px 0;
+		height: 80px;
+	}
+
+	th {
+		&:nth-of-type(1) {
+			width: 18em;
+		}
+
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			width: 1.8em;
+		}
+	}
+	
+
+	td:nth-of-type(1) {
+		text-align: left;
+		font-variant-numeric: lining-nums;
+	}
+
+	td:nth-of-type(2), td:nth-of-type(3) {
+		text-align: right;
+	}
+
+	thead {
+	position: sticky;
+	top:2px;
+
+	>* {
+		outline: 2px solid light-dark(white, black);
+	}
 }
 
-td:nth-of-type(2), td:nth-of-type(3) {
-	text-align: right;
 }
 
+.key {
+	width: max(50%, 50em);
+
+
+	th {
+		width: 2em;
+	}
+
+	td>span {
+		font-size: small;
+	}
+}
 .number {
 	text-align: right;
 	font-family: "Consolas", monospace;
@@ -66,14 +94,20 @@ td:nth-of-type(2), td:nth-of-type(3) {
 
 
 
-
-thead {
-	position: sticky;
-	top:2px;
-	* {
-		outline: 2px solid light-dark(white, black);
-	}
+.correct {
+	border-left: 4px solid oklch( from var(--lives-3) calc(l + 0.3) c h );
 }
+
+.incorrect {
+	border-left: 4px solid oklch( from var(--lives-1) calc(l + 0.3) c h );
+}
+
+.omitted {
+	border-left: 4px solid oklch( from var(--lives-2) calc(l + 0.3) c h );
+}
+
+
+
 
 
 

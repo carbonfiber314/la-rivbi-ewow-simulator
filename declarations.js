@@ -15,9 +15,9 @@ function get_part(parts, idx, is_number = false){
 	} 
 }
 
-let rr_contestants = [0, 16607, 8623, 8062, 5626, 4016, 2767, 2152, 1479, 1095, 830, 600, 452, 358, 278, 213, 157];
-let prize_ranks = [0, 830, 431, 403, 281, 201, 138, 108, 74, 55, 42, 30, 22, 18, 14, 11, 8];
-let safe_ranks = [0, 8470, 4397, 4111, 2869, 2048, 1411, 1098, 754, 558, 423, 306, 231, 183, 142, 109, 81];
+let rr_contestants = [0, 16607, 8623, 8062, 5626, 4016, 2767, 2152, 1479, 1095, 830, 600, 452, 358, 278, 213, 157, 122];
+let prize_ranks = [0, 830, 431, 403, 281, 201, 138, 108, 74, 55, 42, 30, 22, 18, 14, 11, 8, 12];
+let safe_ranks = [0, 8470, 4397, 4111, 2869, 2048, 1411, 1098, 754, 558, 423, 306, 231, 183, 142, 109, 81, 63];
 let total_eps = rr_contestants.length - 1;
 let fields = [
 	"uuid", "name", "subtitle", 
@@ -36,7 +36,8 @@ let fields = [
 	"response13", "confessional13", "average13", "std_dev13", "vote_count13", "response_drp13", "average_drp13", "std_dev_drp13", "vote_count_drp13", "response_trp13", "average_trp13", "std_dev_trp13", "vote_count_trp13", "rank13", "lives13", "entries13",
 	"response14", "confessional14", "average14", "std_dev14", "vote_count14", "response_drp14", "average_drp14", "std_dev_drp14", "vote_count_drp14", "response_trp14", "average_trp14", "std_dev_trp14", "vote_count_trp14", "rank14", "lives14", "entries14",
 	"response15", "confessional15", "average15", "std_dev15", "vote_count15", "response_drp15", "average_drp15", "std_dev_drp15", "vote_count_drp15", "response_trp15", "average_trp15", "std_dev_trp15", "vote_count_trp15", "rank15", "lives15", "entries15",
-	"response16", "confessional16", "average16", "std_dev16", "vote_count16", "response_drp16", "average_drp16", "std_dev_drp16", "vote_count_drp16", "response_trp16", "average_trp16", "std_dev_trp16", "vote_count_trp16", "rank16", "lives16", "entries16",
+	"response16", "confessional16", "average16", "std_dev16", "vote_count16", "response_drp16", "average_drp16", "std_dev_drp16", "vote_count_drp16", "rank16", "lives16", "entries16",
+	"response17", "confessional17", "average17", "std_dev17", "vote_count17", "response_drp17", "average_drp17", "std_dev_drp17", "vote_count_drp17", "rank17", "lives17", "entries17",
 ];
 
 

@@ -47,6 +47,11 @@ fieldset {
 	text-align: center;
 }
 
+#leaderboard td:nth-of-type(2) {
+	font-weight: bold;
+}
+
+
 
 td {
 	text-align: left;

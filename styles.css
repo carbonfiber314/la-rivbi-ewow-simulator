@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 	font-family: "Overpass", sans-serif;
 	color-scheme: light dark;
+
+	--background-color: light-dark(#FFF, #111);
 
 	--lives-0: light-dark(#D7C6C6, #6b5757);
 	--lives-1: light-dark(#F2D4D4, #ae5555);
@@ -15,6 +16,19 @@
 	--lives-8: light-dark(#DFCAFF, #8954ba);
 	--lives-9: light-dark(#EFCAFF, #ae54ba);
 	--lives-10: light-dark(#ffd7fd, #ba5484);
+
+	--lives-fade-0: color-mix(in oklch, var(--lives-0), var(--background-color));
+	--lives-fade-1: color-mix(in oklch, var(--lives-1), var(--background-color));
+	--lives-fade-2: color-mix(in oklch, var(--lives-2), var(--background-color));
+	--lives-fade-3: color-mix(in oklch, var(--lives-3), var(--background-color));
+	--lives-fade-4: color-mix(in oklch, var(--lives-4), var(--background-color));
+	--lives-fade-5: color-mix(in oklch, var(--lives-5), var(--background-color));
+	--lives-fade-6: color-mix(in oklch, var(--lives-6), var(--background-color));
+	--lives-fade-7: color-mix(in oklch, var(--lives-7), var(--background-color));
+	--lives-fade-8: color-mix(in oklch, var(--lives-8), var(--background-color));
+	--lives-fade-9: color-mix(in oklch, var(--lives-9), var(--background-color));
+	--lives-fade-10: color-mix(in oklch, var(--lives-10), var(--background-color));
+
 }
 
 body {
@@ -22,10 +36,14 @@ body {
 	max-width: 60em;
 	margin: auto;
 	padding: 1em;
-	background: light-dark(#FFF, #111);
+	background: var(--background-color);
 	color: light-dark(#000, #FFF);
 }
 
 h1, h2, h3, p {
 	margin: 0.1em 0;
+}
+
+dt {
+	font-weight: bold;
 }

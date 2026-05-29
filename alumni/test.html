@@ -12,38 +12,60 @@
 
 <body>
 
-
+<a href="../index.html">← Home</a>
 <h1>la rivbi's EWOWlumni Picks Compilation</h1>
 
 <p class="text_center">
 This is a compilation of people's EWOWlumni predictions/wishlists and how well they aged.
 Click on a column's title to sort by that column!
 </p>
-<p class="text_center">
-Let me (<del>la rivbi</del><ins>CarbonFiber</ins>) know if you make an EWOWlumni prediction/wishlist! It will be added here.
-</p>
-<p class="text_center">
-Update 2024/10/10: Now the background colors show the lives of the contestant at the time of prediction.
-</p>
-<p class="text_center">
-<a href="../predictions/test.html">Make your own prediction!</a>
-</p>
+
+
+
+<table class="key">
+  <tr>
+    <th title="Lives">❤</th>
+    <td style="background-color: var(--lives-0);">0</td>
+    <td style="background-color: var(--lives-1);">1</td>
+    <td style="background-color: var(--lives-2);">2</td>
+    <td style="background-color: var(--lives-3);">3</td>
+    <td style="background-color: var(--lives-4);">4</td>
+    <td style="background-color: var(--lives-5);">5</td>
+    <td style="background-color: var(--lives-6);">6</td>
+    <td style="background-color: var(--lives-7);">7</td>
+    <td style="background-color: var(--lives-8);">8</td>
+    <td style="background-color: var(--lives-9);">9</td>
+    <td style="background-color: var(--lives-10);">10</td>
+  </tr>
+  <tr>
+    <th title="Symbols">⁂</th>
+    <td class="correct" colspan="3" style="background-color: var(--lives-2);">✓<span>: picked, in alumni</span></td>
+
+    <td class="incorrect" colspan="3" style="background-color: var(--lives-4);">✗<span>: picked, not alumn</span></td>
+    <td class="omitted"  colspan="3" style="background-color: var(--lives-fade-7);">○<span>: unpicked, in alumni</span></td>
+    <td class="not-included-demo" colspan="2" style="background-color: var(--lives-fade-10);"><span>unpicked, not alumn</span></td>
+  </tr>
+</table>
 
 <h2 id="load">Loading...</h2>
-<table class="center">
+<table class="picks-table">
   <thead id="predictions">
   </thead>
   <tbody id="contestants">
   </tbody>
 </table>
 
-
-<p class="text_center">
-<a href="../index.html">Home</a>
+<h2>Updates</h2>
+<dl>
+<dt>2026-05-29</dt>
+<dd>Alumni has been determined! Some changes were made to the table to <i>try</i> and show the accuracy of the picks.</dd>
+<dt>2024-10-10</dt>
+<dd>Now the background colors show the lives of the contestant at the time of prediction.</dd>
+</dl>
 
 <script src="../declarations.js"></script>
 <script src="../load-master.js"></script>
 <script src="main.js"></script>
-</p>
+
 </body>
 </html>
